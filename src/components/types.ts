@@ -185,9 +185,9 @@ export const FunctionWithTodoObjectVoidSchema = z
   .function()
   .args(TodoObjectWithBaseDateSchema)
   .returns(VoidSchema);
-// export type FunctionWithTodoObjectVoidType = z.infer<
-//   typeof FunctionWithTodoObjectVoidSchema
-// >;
+export type FunctionWithTodoObjectVoidType = z.infer<
+  typeof FunctionWithTodoObjectVoidSchema
+>;
 
 /*Title*/
 export const TitlePropsSchema = ItemObjectSchema.extend({
@@ -254,18 +254,18 @@ export const CategoryCardPropsSchema = z.object({
 export type CategoryCardPropsType = z.infer<typeof CategoryCardPropsSchema>;
 
 /*Category Form*/
-// export const CategoryFormObjectSchema = z.object({
-//   category: ItemObjectSchema,
-// });
-//export type CategoryFormObjectType = z.infer<typeof CategoryFormObjectSchema>;
+export const CategoryFormObjectSchema = z.object({
+  category: ItemObjectSchema,
+});
+export type CategoryFormObjectType = z.infer<typeof CategoryFormObjectSchema>;
 
 export const FunctionWithCategoryFormSchema = z
   .function()
   .args(ItemObjectSchema)
   .returns(VoidSchema);
-// export type FunctionWithCategoryFormType = z.infer<
-//   typeof FunctionWithCategoryFormSchema
-// >;
+export type FunctionWithCategoryFormType = z.infer<
+  typeof FunctionWithCategoryFormSchema
+>;
 
 export const CategoryFormPropsSchema = ItemObjectSchema.extend({
   onSubmit: FunctionWithCategoryFormSchema,
@@ -277,101 +277,103 @@ export const CategoryFormAddSchema = ItemObjectSchema.extend({
 });
 export type CategoryFormAddType = z.infer<typeof CategoryFormAddSchema>;
 
-// export const CategoryFormEditSchema =
-//   CategoryFormAddSchema.merge(BaseObjectSchema);
-//export type CategoryFormEditType = z.infer<typeof CategoryFormEditSchema>;
+export const CategoryFormEditSchema =
+  CategoryFormAddSchema.merge(BaseObjectSchema);
+export type CategoryFormEditType = z.infer<typeof CategoryFormEditSchema>;
 
-// export const CategoryFormDataUnionSchema = z.union([
-//   CategoryFormAddSchema,
-//   CategoryFormEditSchema,
-// ]);
-//export type CategoryFormDataUnionType = z.infer<
-//   typeof CategoryFormDataUnionSchema
-// >;
+export const CategoryFormDataUnionSchema = z.union([
+  CategoryFormAddSchema,
+  CategoryFormEditSchema,
+]);
+export type CategoryFormDataUnionType = z.infer<
+  typeof CategoryFormDataUnionSchema
+>;
 
-// export const FunctionCategoryFormWithDataVoidSchema = z
-//   .function()
-//   .args(CategoryFormDataUnionSchema)
-//   .returns(VoidSchema);
-// export type FunctionCategoryFormWithDataVoidType = z.infer<
-//   typeof FunctionWithStringVoidSchema
-// >;
+export const FunctionCategoryFormWithDataVoidSchema = z
+  .function()
+  .args(CategoryFormDataUnionSchema)
+  .returns(VoidSchema);
+export type FunctionCategoryFormWithDataVoidType = z.infer<
+  typeof FunctionWithStringVoidSchema
+>;
 
-/*Todo Form*/
-// export const TodoFormAddSchema = TodoObjectSchema.extend({
-//   selectedCategory: CategoryObjectWithBaseUnionStringSchema,
-// });
-//export type TodoFormAddType = z.infer<typeof TodoFormAddSchema>;
+/*To do Form*/
+export const TodoFormAddSchema = TodoObjectSchema.extend({
+  selectedCategory: CategoryObjectWithBaseUnionStringSchema,
+});
+export type TodoFormAddType = z.infer<typeof TodoFormAddSchema>;
 
-//export const TodoFormEditSchema = TodoFormAddSchema.merge(BaseObjectSchema);
-//export type TodoFormEditType = z.infer<typeof TodoFormEditSchema>;
+export const TodoFormEditSchema = TodoFormAddSchema.merge(BaseObjectSchema);
+export type TodoFormEditType = z.infer<typeof TodoFormEditSchema>;
 
-// export const FunctionTodoFormWithDataVoidSchema = z
-//   .function()
-//   .args(TodoFormAddSchema)
-//   .returns(VoidSchema);
-//export type FunctionTodoFormWithDataVoidType = z.infer<typeof FunctionWithStringVoidSchema>;
+export const FunctionTodoFormWithDataVoidSchema = z
+  .function()
+  .args(TodoFormAddSchema)
+  .returns(VoidSchema);
+export type FunctionTodoFormWithDataVoidType = z.infer<
+  typeof FunctionWithStringVoidSchema
+>;
 
-// export const TodoFormPropsSchema = z.object({
-//   id: StringSchema.optional(),
-//   title: StringSchema.optional(),
-//   description: StringSchema.optional(),
-//   deadline: DateSchema.optional(),
-//   done: BooleanSchema.optional(),
-//   categories: CategoriesObjectWithBaseUnionSchema,
-//   onSubmit: FunctionTodoFormWithDataVoidSchema,
-// });
-//export type TodoFormPropsType = z.infer<typeof TodoFormPropsSchema>;
+export const TodoFormPropsSchema = z.object({
+  id: StringSchema.optional(),
+  title: StringSchema.optional(),
+  description: StringSchema.optional(),
+  deadline: DateSchema.optional(),
+  done: BooleanSchema.optional(),
+  categories: CategoriesObjectWithBaseUnionSchema,
+  onSubmit: FunctionTodoFormWithDataVoidSchema,
+});
+export type TodoFormPropsType = z.infer<typeof TodoFormPropsSchema>;
 
-// export const TodoFormSubmitHandlerSchema = z.object({
-//   title: StringSchema,
-//   description: StringSchema.optional(),
-//   deadline: DateSchema,
-//   done: BooleanSchema,
-//   selectedCategory: CategoriesObjectWithBaseUnionSchema,
-// });
-// export type TodoFormSubmitHandlerType = z.infer<
-//   typeof TodoFormSubmitHandlerSchema
-// >;
+export const TodoFormSubmitHandlerSchema = z.object({
+  title: StringSchema,
+  description: StringSchema.optional(),
+  deadline: DateSchema,
+  done: BooleanSchema,
+  selectedCategory: CategoriesObjectWithBaseUnionSchema,
+});
+export type TodoFormSubmitHandlerType = z.infer<
+  typeof TodoFormSubmitHandlerSchema
+>;
 
 export const TodoObjectDateSchema = ItemObjectSchema.extend({
   deadline: DateSchema,
   done: BooleanSchema,
 });
-//export type TodoObjectDateType = z.infer<typeof TodoObjectDateSchema>;
+export type TodoObjectDateType = z.infer<typeof TodoObjectDateSchema>;
 
-// export const TodoEditFormSchema = TodoObjectDateSchema.extend({
-//   selectedCategory: CategoryObjectWithBaseUnionStringSchema,
-// });
-//export type TodoEditFormType = z.infer<typeof TodoEditFormSchema>;
+export const TodoEditFormSchema = TodoObjectDateSchema.extend({
+  selectedCategory: CategoryObjectWithBaseUnionStringSchema,
+});
+export type TodoEditFormType = z.infer<typeof TodoEditFormSchema>;
 
-// export const FunctionOnSubmitEditFormSchema = z
-//   .function()
-//   .args(TodoEditFormSchema)
-//   .returns(VoidSchema);
-// export type FunctionOnSubmitEditFormType = z.infer<
-//   typeof FunctionOnSubmitEditFormSchema
-// >;
+export const FunctionOnSubmitEditFormSchema = z
+  .function()
+  .args(TodoEditFormSchema)
+  .returns(VoidSchema);
+export type FunctionOnSubmitEditFormType = z.infer<
+  typeof FunctionOnSubmitEditFormSchema
+>;
 
-// export const TodoEditFormPropsSchema = z.object({
-//   id: StringSchema.optional(),
-//   title: StringSchema.optional(),
-//   description: StringSchema.optional(),
-//   deadline: DateSchema.optional(),
-//   done: BooleanSchema.optional(),
-//   categories: CategoriesObjectWithBaseSchema,
-//   onSubmit: FunctionOnSubmitEditFormSchema,
-// });
-//export type TodoEditFormPropsType = z.infer<typeof TodoEditFormPropsSchema>;
+export const TodoEditFormPropsSchema = z.object({
+  id: StringSchema.optional(),
+  title: StringSchema.optional(),
+  description: StringSchema.optional(),
+  deadline: DateSchema.optional(),
+  done: BooleanSchema.optional(),
+  categories: CategoriesObjectWithBaseSchema,
+  onSubmit: FunctionOnSubmitEditFormSchema,
+});
+export type TodoEditFormPropsType = z.infer<typeof TodoEditFormPropsSchema>;
 
-// export const FormDataSchema = z.object({
-//   title: z.string().min(1, { message: "Minimum length is 1." }),
-//   description: z.string().optional(),
-//   deadline: z.string(),
-//   done: z.boolean(),
-//   selectedCategory: z.string(),
-// });
-//export type FormDataType = z.infer<typeof FormDataSchema>;
+export const FormDataSchema = z.object({
+  title: z.string().min(1, { message: "Minimum length is 1." }),
+  description: z.string().optional(),
+  deadline: z.string(),
+  done: z.boolean(),
+  selectedCategory: z.string(),
+});
+export type FormDataType = z.infer<typeof FormDataSchema>;
 
 export const ArgsSchema = TodoObjectDateSchema.extend({
   selectedCategory: CategoryObjectWithBaseSchema,
@@ -379,12 +381,12 @@ export const ArgsSchema = TodoObjectDateSchema.extend({
 });
 export type ArgsType = z.infer<typeof ArgsSchema>;
 
-// export const PropsSchema = z.object({
-//   id: z.string().optional(),
-//   title: z.string().optional(),
-//   description: z.string().optional(),
-//   deadline: z.date().optional(),
-//   done: z.boolean().optional(),
-//   onSubmit: z.function().args(ArgsSchema).returns(z.void()),
-// });
-//export type PropsType = z.infer<typeof PropsSchema>;
+export const PropsSchema = z.object({
+  id: z.string().optional(),
+  title: z.string().optional(),
+  description: z.string().optional(),
+  deadline: z.date().optional(),
+  done: z.boolean().optional(),
+  onSubmit: z.function().args(ArgsSchema).returns(z.void()),
+});
+export type PropsType = z.infer<typeof PropsSchema>;

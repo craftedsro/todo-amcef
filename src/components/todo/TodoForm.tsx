@@ -7,7 +7,7 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useEffect, useState } from "react";
-import { ArgsType, FormDataSchema, FormDataType, PropsType } from "./types";
+import { ArgsType, FormDataSchema, FormDataType, PropsType } from "../types";
 import { useQuery } from "@tanstack/react-query";
 import { getCategories } from "../../api/api";
 
