@@ -7,9 +7,9 @@
   "/category": "pages/category.html",
   "/": "pages/index.html",
   "/todo/[id]": "pages/todo/[id].html",
-  "/todo/add": "pages/todo/add.html",
-  "/todo/edit": "pages/todo/edit.html",
   "/todo": "pages/todo.html",
+  "/todo/edit": "pages/todo/edit.html",
+  "/todo/add": "pages/todo/add.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
