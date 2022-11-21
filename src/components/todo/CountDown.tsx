@@ -19,29 +19,32 @@ const CountDown = ({ deadline, className }: CountDownPropsType) => {
 
   const [days, hours, minutes, seconds] = getReturnValues(countDown);
 
-  // @ts-ignore
   return (
     <div className={`flex gap-5 ${className}`}>
       <div>
         <span className="countdown font-mono text-2xl">
+          {/*@ts-ignore*/}
           <span style={{ "--value": days }}>{days}</span>
         </span>
         days
       </div>
       <div>
         <span className="countdown font-mono text-2xl">
+          {/*@ts-ignore*/}
           <span style={{ "--value": hours }}></span>
         </span>
         hours
       </div>
       <div>
         <span className="countdown font-mono text-2xl">
+          {/*@ts-ignore*/}
           <span style={{ "--value": minutes }}></span>
         </span>
         min
       </div>
       <div>
         <span className="countdown font-mono text-2xl">
+          {/*@ts-ignore*/}
           <span style={{ "--value": seconds }}></span>
         </span>
         sec
