@@ -9,6 +9,7 @@ import {
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import TodoForm from "../../src/components/todo/TodoForm";
 import {
+  ArgsType,
   CategoryObjectWithBaseType,
   TodoObjectType,
   TodoObjectWithBaseUnionType,
@@ -16,7 +17,6 @@ import {
 } from "../../src/components/types";
 import Notify from "../../src/components/ui/Notify";
 import { useEffect, useState } from "react";
-import { ArgsType } from "../../src/components/todo/types";
 
 const AddTodo: NextPage = () => {
   const queryClient = useQueryClient();

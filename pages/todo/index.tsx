@@ -42,10 +42,15 @@ const Todos: NextPage = () => {
   });
 
   useEffect(() => {
-    if (searchText && searchText !== "" && getTodosQuery.isSuccess) {
+    if (
+      searchText &&
+      searchText !== "" &&
+      getTodosQuery.isSuccess &&
+      getTodosQuery.data
+    ) {
       setSearchTodos(
-        getTodosQuery.data.filter((category: CategoryObjectWithBaseType) =>
-          category.title.toLowerCase().includes(searchText.toLowerCase())
+        getTodosQuery.data.filter((todo: TodoObjectWithBaseDateType) =>
+          todo.title.toLowerCase().includes(searchText.toLowerCase())
         )
       );
     } else if (getTodosQuery.isSuccess && getTodosQuery.data) {

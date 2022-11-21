@@ -32,3 +32,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Assignment
+
+Create a web application for ToDo lists in the React framework.
+
+Required functionality:
+- Creating a ToDo list (there can be more)
+  The ToDo list includes:
+    - title
+    - ToDo items
+- Adding a ToDo item to the list
+  ToDo item contains:
+    - headline
+    - free text
+    - deadline (date and time)
+- Deleting a ToDo item
+- Marking a ToDo as complete
+- Filtering items (all, active, completed)
+- Searching for ToDo items within the list
+- Persistence of ToDo lists using an external API (eg mockapi.io)
+
+Minimum technological requirements:
+- TypeScript
+- advanced React constructions (functional components, hooks, data management)
+- multiple application routes
+- managed forms (react-hook-form or formik)
+- validation of user data using zod, joi, or yup
+- work with HTTP using fetchAPI or Axios
+- reasonable structuring of application source codes
+
+Recommended technology stack:
+- Next.js or create-vite react-ts
+- TailwindCSS + HeadlessUI or daisyUI
+- react-hook-form + ZOD
+- ReactQuery
+  
+We leave the subpages and layout of the application up to you
+The web application must be deployed e.g. for example at netlify.com, githubpages.com

@@ -10,13 +10,13 @@ import { NextPage } from "next";
 import PageLayout from "../../src/components/ui/layout/PageLayout";
 import React, { useEffect, useState } from "react";
 import {
+  ArgsType,
   CategoryObjectWithBaseType,
   TodoObjectWithBaseType,
   TodoObjectWithBaseUnionType,
   VoidType,
 } from "../../src/components/types";
 import Notify from "../../src/components/ui/Notify";
-import { ArgsType } from "../../src/components/todo/types";
 import TodoForm from "../../src/components/todo/TodoForm";
 
 const EditTodo: NextPage = () => {

@@ -12,7 +12,9 @@ const Home: NextPage = () => {
             <p className="py-6">This project is base on AMCEF request.</p>
             <p>Create Todo app based on React framework.</p>
             <div className="py-6">
-              <Link href="https://github.com/crafted">Read more</Link>
+              <Link href="https://github.com/crafted/todo-amcef">
+                Read more
+              </Link>
             </div>
             <Link
               href={{ pathname: "/category/add" }}

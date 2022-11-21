@@ -8,6 +8,7 @@ import {
   TodoObjectType,
   TodoObjectWithBaseType,
   TodoObjectWithBaseUnionType,
+  TodosObjectWithBaseDateUnionType,
 } from "../components/types";
 
 const API_URL = "https://636ba3e07f47ef51e13633ee.mockapi.io/api/v1/";
@@ -82,7 +83,7 @@ export const deleteCategory = async (
   }
 };
 
-export const getTodos = async () => {
+export const getTodos = async (): Promise<TodosObjectWithBaseDateUnionType> => {
   try {
     const result = await axios.get(API_URL + TODO_URL);
 
